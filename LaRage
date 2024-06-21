@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Victorian Museum</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Lora&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background-color: #f8e5e5;
+            color: #4a0e1c;
+            display: flex;
+        }
+
+        .side-nav {
+            width: 250px;
+            height: 100vh;
+            background-color: #8e293d;
+            padding: 2rem;
+            position: fixed;
+        }
+
+        .side-nav h1 {
+            color: #f8e5e5;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .side-nav ul {
+            list-style-type: none;
+        }
+
+        .side-nav li {
+            margin-bottom: 1rem;
+        }
+
+        .side-nav a {
+            color: #f8e5e5;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .side-nav a:hover {
+            color: #ffc0cb;
+        }
+
+        main {
+            margin-left: 250px;
+            padding: 2rem;
+            width: calc(100% - 250px);
+        }
+
+        .exhibit {
+            background-color: #fff;
+            border: 2px solid #8e293d;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .exhibit h2 {
+            font-family: 'Cormorant Garamond', serif;
+            color: #8e293d;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ffc0cb;
+            padding-bottom: 0.5rem;
+        }
+
+        .exhibit-content {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .exhibit img {
+            max-width: 50%;
+            height: auto;
+            border: 3px solid #8e293d;
+        }
+
+        .exhibit p {
+            line-height: 1.6;
+        }
+
+        .ornament {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 2rem;
+            color: #8e293d;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .side-nav {
+                width: 100%;
+                height: auto;
+                position: static;
+            }
+            main {
+                margin-left: 0;
+                width: 100%;
+            }
+            .exhibit-content {
+                flex-direction: column;
+            }
+            .exhibit img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="side-nav">
+        <h1>Elegance Victorian Museum</h1>
+        <ul>
+            <li><a href="#exhibit1">Exhibit 1</a></li>
+            <li><a href="#exhibit2">Exhibit 2</a></li>
+            <li><a href="#exhibit3">Exhibit 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="exhibit1" class="exhibit">
+            <h2>The Victorian Parlor</h2>
+            <div class="exhibit-content">
+                <img src="victorian_parlor.jpg" alt="Victorian Parlor">
+                <p>Step into the heart of a Victorian home with our meticulously recreated parlor. Observe the ornate furnishings, delicate porcelain, and the latest innovations of the 19th century.</p>
+            </div>
+        </section>
+        <div class="ornament">❦</div>
+        <section id="exhibit2" class="exhibit">
+            <h2>Industrial Revolution Marvels</h2>
+            <div class="exhibit-content">
+                <img src="industrial_revolution.jpg" alt="Industrial Revolution Artifacts">
+                <p>Explore the technological wonders that transformed society during the Victorian era. From steam engines to early telegraphs, witness the birth of modern industry.</p>
+            </div>
+        </section>
+        <div class="ornament">❦</div>
+        <section id="exhibit3" class="exhibit">
+            <h2>Victorian Fashion Gallery</h2>
+            <div class="exhibit-content">
+                <img src="victorian_fashion.jpg" alt="Victorian Fashion">
+                <p>Admire the elegance and complexity of Victorian fashion. Our collection showcases the evolving styles of both men and women throughout the 19th century.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
